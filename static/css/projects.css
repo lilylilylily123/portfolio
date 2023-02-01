@@ -1,27 +1,16 @@
-.woof {
-    /* background-image: url("./assets/gradientred.png"); \*/
+.projects {
     height: 3000px; /* Used to enable scrolling */
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #1c1919;
     height: 100vh;
     width: 100vw;
-
 }
 body, html {
     padding: 0;
     margin: 0;
     height: 100vh;
     width: 100vw;
-}
-
-
-.asci {
-    color: white;
-    position: absolute;
-    bottom: 80px;
-    left: 80px;
-
 }
 * {
     margin: 0;
@@ -31,4 +20,22 @@ body, html {
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
+}
+
+.back {
+    position: absolute;
+    bottom: 80px;
+    right: 80px;
+    user-select: none;
+    color: white;
+
+}
+
+.about {
+    position: absolute;
+    bottom: 80px;
+    left: 80px;
+    user-select: none;
+    color: white;
+
 }
