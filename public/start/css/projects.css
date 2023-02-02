@@ -1,0 +1,97 @@
+.projects {
+    height: 3000px; /* Used to enable scrolling */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #1c1919;
+    height: 100vh;
+    width: 100vw;
+}
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.back {
+    position: absolute;
+    bottom: 80px;
+    right: 80px;
+    user-select: none;
+    color: white;
+
+}
+
+.about {
+    position: absolute;
+    bottom: 80px;
+    left: 80px;
+    user-select: none;
+    color: white;
+
+}
+.github-pinner.gp-repo.undefined {
+    position: absolute;
+    user-select: none;
+    bottom: 60px;
+    left: 100px;
+    color: white;
+    scale: 105%;
+    mso-foreground: white;
+    background-color: rgb(45, 44, 44);
+}
+
+a.gp-title {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+div.gp-container-repo {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+a.gp-stat.gp-link{
+    color: #00da1d;
+}
+#githubpin2.github-pinner.gp-repo.undefined {
+    position: relative;
+    top: 100px;
+    left: 80vw;
+    color: white;
+    scale: 104%;
+    user-select: none;
+    mso-foreground: white;
+    background-color: rgb(45, 44, 44);
+}
+
+#githubpin3.github-pinner.gp-repo.undefined {
+    position: relative;
+    top: 250px;
+    left: 15vw;
+    color: white;
+    scale: 142%;
+    user-select: none;
+    mso-foreground: white;
+    background-color: rgb(45, 44, 44);
+}
+
+#githubpin4.github-pinner.gp-repo.undefined {
+    position: relative;
+    top: 269px;
+    left: 57vw;
+    color: white;
+    scale: 132%;
+    user-select: none;
+    mso-foreground: white;
+    background-color: rgb(45, 44, 44);
+}

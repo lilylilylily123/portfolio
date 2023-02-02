@@ -1,4 +1,4 @@
-.projects {
+.about-main {
     height: 3000px; /* Used to enable scrolling */
     background-size: cover;
     background-repeat: no-repeat;
@@ -22,20 +22,21 @@ body, html {
     background: transparent;
 }
 
-.back {
-    position: absolute;
-    bottom: 80px;
-    right: 80px;
-    user-select: none;
-    color: white;
 
-}
 
-.about {
+.backabout {
     position: absolute;
     bottom: 80px;
     left: 80px;
     user-select: none;
     color: white;
 
+}
+.about-text {
+    color: rgba(255, 255, 255, 0.76);
+    font-family: "JetBrains Mono Medium", monospace;
+    position: absolute;
+    top: 50vh;
+    left: 30vw;
+    font-size: 2vw;
 }
