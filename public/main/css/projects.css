@@ -59,7 +59,7 @@ a.gp-stat.gp-link{
 
 #githubpin.github-pinner.gp-repo.undefined {
     opacity: 0;
-    animation: pins 2s 10.5s forwards, flash 0.8s 15.3s forwards, glitch 8s 22.8s alternate infinite;
+    animation: pins 2s 10.5s forwards, flash 0.8s 14.3s forwards, glitch 8s 22.8s alternate infinite;
     position: absolute;
     user-select: none;
     bottom: 80px;
@@ -70,9 +70,9 @@ a.gp-stat.gp-link{
     background-color: rgb(45, 44, 44);
 }
 #githubpin2.github-pinner.gp-repo.undefined {
-    /*opacity: 0;
-    animation: pins 1.3s 2.5s forwards, flash 0.5s 7s forwards, glitch 8s 15.3s alternate infinite; */
-    position: relative;
+    opacity: 0;
+    animation: pins2 2s 23.4s forwards, flash 0.5s 24s forwards, glitch 8s 30.3s alternate infinite;
+    position: absolute;
     top: 100px;
     left: 75vw;
     color: white;
@@ -83,11 +83,11 @@ a.gp-stat.gp-link{
 }
 
 #githubpin3.github-pinner.gp-repo.undefined {
-    /*opacity: 0;
-    animation: pins 1s 3.5s forwards, flash 0.5s 10s forwards, glitch 8s 27.7s alternate infinite;*/
-    position: relative;
-    top: 200px;
-    left: 15vw;
+    opacity: 0;
+    animation: pins2 2s 18.05s forwards, glitch 8s 27.7s alternate infinite;
+    position: absolute;
+    top: 320px;
+    left: 13vw;
     color: white;
     scale: 156%;
     user-select: none;
@@ -96,10 +96,10 @@ a.gp-stat.gp-link{
 }
 
 #githubpin4.github-pinner.gp-repo.undefined {
-    /*opacity: 0;
-    animation: pins 1.3s 1s forwards, flash 0.5s 9s forwards, glitch 8s 10.2s alternate infinite;*/
-    position: relative;
-    top: 269px;
+    opacity: 0;
+    animation: pins 1.3s 28.2s forwards, flash 0.5s 29.9s forwards, glitch 8s 34.7s alternate infinite;
+    position: absolute;
+    top: 360px;
     left: 57vw;
     color: white;
     scale: 132%;
@@ -130,10 +130,30 @@ a.gp-stat.gp-link{
         opacity: 40%;
     }
 }
+@keyframes pins2 {
+    0% {
+        opacity: 0%;
+    }
+    25% {
+        opacity: 25%;
+    }
+    50% {
+        opacity: 35%;
+    }
+    75% {
+        opacity: 39%;
+    }
+    80% {
+        opacity: 60%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
 
 @keyframes flash {
     0% {
-        opacity: 0%;
+        opacity: 100%;
     }
     10% {
         opacity: 50%;
@@ -172,7 +192,7 @@ a.gp-stat.gp-link{
 
 .movemouse {
     opacity: 10%;
-    color: white;
+    color: lightgreen;
     user-select: none;
     position: absolute;
     animation: route1;
@@ -181,7 +201,9 @@ a.gp-stat.gp-link{
     scale: 30%;
 }
 .movemouse {
-    animation: route1 6s 3s forwards, click 9s 10s forwards, click 9s 14s forwards, click 9s 14.1s forwards;
+    animation: route1 6s 3s forwards, click 9s 10s forwards, click 9s 14s forwards, click 9s 14.1s forwards,
+    route2 4s 14.5s forwards, click 9s 18.2s forwards, route3 5s 18.35s forwards, click 9s 23s forwards,
+    route4 4s 24s forwards, click 9s 28.4s forwards, scaleandexit 3s 30s forwards;
 }
 
 @keyframes click {
@@ -204,5 +226,67 @@ a.gp-stat.gp-link{
         opacity: 100%;
         bottom: 0px;
         right: 80vw;
+    }
+}
+
+@keyframes route2 {
+    from {
+        opacity: 100%;
+        bottom: 0px;
+        right: 80vw;
+    }
+    to {
+        opacity: 100%;
+        bottom: 50vh;
+        right: 80vw;
+    }
+}
+@keyframes route3 {
+    from {
+        opacity: 100%;
+        bottom: 50vh;
+        right: 80vw;
+    }
+    to {
+        opacity: 100%;
+        bottom: 70vh;
+        right: 20vh;
+    }
+}
+@keyframes route4 {
+    from {
+        opacity: 100%;
+        bottom: 70vh;
+        right: 20vh;
+    }
+    to {
+        opacity: 100%;
+        bottom: 40vh;
+        right: 30vw;
+    }
+}
+
+@keyframes scaleandexit {
+    0% {
+        opacity: 100%;
+        bottom: 40vh;
+        right: 30vw;
+    }
+    25% {
+        bottom: 50%;
+        right: 50%;
+    }
+    50% {
+        scale: 200%;
+        transform: rotate(360deg) skew(-5deg);
+    }
+    75% {
+        scale: 100%;
+        transform: skew(-3deg);
+    }
+    100% {
+        opacity: 0%;
+        scale: 1%;
+        transform: skew(0deg);
     }
 }
