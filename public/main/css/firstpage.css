@@ -17,6 +17,7 @@ body, html {
 
 
 .asci {
+    user-select: none;
     color: white;
     position: absolute;
     bottom: 80px;
