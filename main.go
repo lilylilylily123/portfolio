@@ -8,7 +8,7 @@ import (
 )
 
 func redirection(w http.ResponseWriter, r *http.Request) {
-	http.Redirect(w, r, "/main/", 302)
+	http.Redirect(w, r, "/main/", http.StatusFound)
 }
 func cookies(w http.ResponseWriter, r *http.Request) {
 	cookie, err := r.Cookie("hasVisited")
@@ -22,7 +22,7 @@ func cookies(w http.ResponseWriter, r *http.Request) {
 			}
 			http.SetCookie(w, cookie)
 			log.Println("cookie not set, redirecting to cookie setter:", err)
-			http.Redirect(w, r, "/gallery/", 302)
+			http.Redirect(w, r, "/gallery/", http.StatusFound)
 		default:
 			log.Println(err)
 			http.Error(w, "server error", http.StatusInternalServerError)
@@ -30,7 +30,7 @@ func cookies(w http.ResponseWriter, r *http.Request) {
 		return
 	} else {
 		log.Println("cookie already set, skipping animations")
-		http.Redirect(w, r, "/work/", 302)
+		http.Redirect(w, r, "/work/", http.StatusFound)
 	}
 	fmt.Println(cookie)
 	//http.Redirect(w, r, "/projects/", 302)
