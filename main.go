@@ -10,6 +10,7 @@ import (
 func redirection(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/main/", 302)
 }
+
 func cookies(w http.ResponseWriter, r *http.Request) {
 	cookie, err := r.Cookie("hasVisited")
 	if err != nil {
@@ -33,7 +34,7 @@ func cookies(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/work/", 302)
 	}
 	fmt.Println(cookie)
-	//http.Redirect(w, r, "/projects/", 302)
+	// http.Redirect(w, r, "/projects/", 302)
 }
 
 const FileDir = "public"
@@ -41,8 +42,8 @@ const FileDir = "public"
 func main() {
 	http.Handle("/main/", http.StripPrefix("/main", http.FileServer(http.Dir(FileDir+"/main"))))
 	log.Println("listening on /main/")
-	//http.Handle("/projects/", http.StripPrefix("/projects", http.FileServer(http.Dir(FileDir+"/projects"))))
-	//http.HandleFunc("/projects/", alreadySeen)
+	// http.Handle("/projects/", http.StripPrefix("/projects", http.FileServer(http.Dir(FileDir+"/projects"))))
+	// http.HandleFunc("/projects/", alreadySeen)
 	http.Handle("/gallery/", http.StripPrefix("/gallery", http.FileServer(http.Dir(FileDir+"/projects"))))
 	log.Println("listening on /gallery/")
 	http.HandleFunc("/project/", cookies)
